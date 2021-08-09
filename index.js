@@ -7,10 +7,12 @@ searchBtnClicked = () => {
 	let searchtext = document.querySelector("#search").value.trim();
 	let searchUrl = `https://api.github.com/users/${searchtext}`;
 	if (searchtext.length <= 0) {
+		document.getElementsByClassName("card_content")[0].style.display = "none";
 		alert("Please Enter a Git User Name");
 	} else {
 		//api call
 		fetchUser(searchUrl);
+		document.querySelector("#search").value = "";
 	}
 };
 
@@ -18,7 +20,6 @@ function fetchUser(url) {
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
-			console.log(data);
 			if (data.message === "Not Found") {
 				alert("user not found");
 			} else {
@@ -65,7 +66,7 @@ update = () => {
 		<td>${ele.name}</td>
 		<td>${ele.location}</td>
 		<td>
-		<button onClick={deleteEle(${index})}>Delete</button>
+		<button id="delBtn" onClick={deleteEle(${index})}>Delete</button>
 		</td>
 		</tr>`;
 	});

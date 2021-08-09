@@ -41,6 +41,16 @@ body {
 	transform: scale(1.01);
 }
 
+.container_body {
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
 .card_content {
 	display: none;
 	margin: 10px 30px;
@@ -49,7 +59,7 @@ body {
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: all 0.4s ease-out;
-	width: 20%;
+	flex: 0.5;
 }
 
 .card_content:hover {
@@ -61,6 +71,30 @@ body {
 	margin: 10px auto;
 	text-align: center;
 }
+.card_body {
+	padding: 5px;
+	text-align: center;
+}
+.card_btn {
+	padding: 10px;
+	text-align: center;
+}
+.card_btn > button {
+	width: 50%;
+	padding: 5px 5px;
+	border: none;
+	background-color: rgb(0, 174, 255);
+	color: white;
+	cursor: pointer;
+}
+.card_btn > button:hover {
+	background: rgb(0, 154, 225);
+}
+.card_btn > button:active {
+	background-color: rgb(0, 174, 255);
+	transform: scale(1.01);
+	transition: all 0.5s ease-in-out;
+}
 #uImg {
 	width: 75%;
 	border-radius: 8px;
@@ -69,13 +103,53 @@ body {
 #uName {
 	font-style: italic;
 	font-weight: 400;
-	font-size: x-large;
+	font-size: 130%;
+}
+#uFName {
+	font-style: italic;
+	font-weight: 400;
 }
 
-.container_body {
+.table_container {
+	padding: 10px;
+	flex: 1;
+	flex-shrink: 0;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: all 0.4s ease-out;
+}
+.table_container:hover {
+	box-shadow: 0 10px 26px 0 rgba(0, 0, 0, 0.3);
+}
+
+.table_container > table {
 	width: 90%;
 	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+.table_container > table th,
+td {
+	text-align: center;
+	padding: 5px;
+	border: 1px solid red;
+}
+
+#delBtn {
+	padding: 6px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(255, 52, 16, 0.878);
+	color: white;
+	cursor: pointer;
+}
+#delBtn:hover {
+	background-color: rgb(255, 0, 0);
+}
+
+#delBtn:active {
+	background-color: rgb(255, 52, 16, 0.878);
+	transform: scale(1.01);
+	transition: all 0.5s ease-in-out;
 }

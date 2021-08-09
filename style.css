@@ -7,7 +7,13 @@
 body {
 	background-color: antiquewhite;
 }
-
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px auto;
+}
 .searchBar {
 	width: 60%;
 	padding: 10px;
@@ -27,17 +33,18 @@ body {
 .searchBar > button {
 	flex: 1;
 	margin: 5px;
-	background-color: aquamarine;
+	background-color: rgb(0, 174, 255);
 	border: 1px solid rgb(0, 0, 0);
 	cursor: pointer;
+	color: white;
 }
 
 .searchBar > button:hover {
-	background-color: rgb(99, 197, 242);
+	background-color: rgb(0, 154, 225);
 }
 
 .searchBar > button:active {
-	background-color: aquamarine;
+	background-color: rgb(0, 174, 255);
 	transform: scale(1.01);
 }
 
